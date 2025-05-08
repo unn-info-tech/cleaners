@@ -1,0 +1,33 @@
+.scroll-container {
+  /* Делаем контейнер прокручиваемым */
+  overflow-y: scroll; /* или auto */
+  height: 100vh; /* Занимает всю высоту окна */
+  scroll-snap-type: y mandatory;
+}
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(100px) scale(0.95);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition-delay: 0.2s;
+  filter: blur(5px);
+}
+.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1); /* Возвращается на место */
+  filter: blur(0);
+}
+.transition-delay2 {
+  transition-delay: 0.4s;
+}
+.transition-delay4 {
+  transition-delay: 0.6s;
+}
+.transition-delay6 {
+  transition-delay: 0.8s;
+}
+.transition-delay8 {
+  transition-delay: 1s;
+}
+.transition-delay10 {
+  transition-delay: 1.2s;
+}
