@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    <link rel="stylesheet" href="{% static 'css/twentytwenty.css' %}">
+    <link rel="stylesheet" href="{% static 'css/appointment.css' %}">
+    <link rel="stylesheet" href="{% static 'slick-1.8.1/slick/slick-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'slick-1.8.1/slick/slick.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <title data-i18n="1"></title>
+</head>
+<body class="scroll-container" id="body">
+
+
+    <!-- COMPLETE YOUR BOOKING PAGE -->
+    <section class="modal">
+        <div class="container">
+            <div class="modal__close"></div>
+            <p class="modal__title" data-i18n="1">Complete Your Booking</p>
+            <p class="modal__p" data-i18n="1">Review your selections and finalize your personalized cleaning plan.</p>
+            <div class="modal__box">
+                <div class="modal__left">
+                    <div class="wrap">
+                        <p class="modal__title2" data-i18n="1">Regular Cleaning</p>
+                        <p class="modal__p2" data-i18n="1">Basic daily care to keep your home clean and fresh.</p>
+                        <ul>
+                            <li>
+                                <div class="left">
+                                    <p data-i18n="1">Regular Cleaning</p>
+                                    <p data-i18n="1">Home <span>•</span>$ 450</p>
+                                </div>
+                                <p class="price" data-i18n="1">$ 900</p>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <p data-i18n="1">Bathrooms</p>
+                                    <p data-i18n="1">2 BR <span>•</span>$ 450</p>
+                                </div>
+                                <p class="price" data-i18n="1">$ 900</p>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <p data-i18n="1">Bathrooms</p>
+                                    <p data-i18n="1">2 BD <span>•</span>$ 100</p>
+                                </div>
+                                <p class="price" data-i18n="1">$ 900</p>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <p data-i18n="1">Space Size</p>
+                                    <p data-i18n="1">400 FT. <span>•</span>$ 1</p>
+                                </div>
+                                <p class="price" data-i18n="1">$ 900</p>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <p data-i18n="1">Pets</p>
+                                    <p data-i18n="1">2 PC. <span>•</span>$ 50</p>
+                                </div>
+                                <p class="price" data-i18n="1">$ 900</p>
+                            </li>
+                        </ul>
+                        <div class="bottom">
+                            <p data-i18n="1">Subtotal</p>
+                            <p class="price" data-i18n="1">$ 1'990</p>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <p class="modal__title2" data-i18n="1">Regular Cleaning</p>
+                        <p class="modal__p2" data-i18n="1">Basic daily care to keep your home clean and fresh.</p>
+                        <ul>
+                            <li>
+                                <div class="left">
+                                    <p data-i18n="1">Wall Cleaning</p>
+                                    <p data-i18n="1">1 <span>•</span>$ 50</p>
+                                </div>
+                                <p class="price" data-i18n="1">$ 900</p>
+                            </li>
+                        </ul>
+                        <div class="bottom">
+                            <p data-i18n="1">Subtotal</p>
+                            <p class="price" data-i18n="1">$ 50</p>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <ul>
+                            <li>
+                                <div class="left">
+                                    <p data-i18n="1">Subscription</p>
+                                    <p data-i18n="1">1 <span>•</span>10 %</p>
+                                </div>
+                                <p class="price" data-i18n="1">$ 900</p>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <p data-i18n="1">Public Sector Role</p>
+                                    <p data-i18n="1">1 <span>•</span>% 10</p>
+                                </div>
+                                <p class="price" data-i18n="1">$ 900</p>
+                            </li>
+                        </ul>
+                        <div class="bottom">
+                            <p data-i18n="1">Subtotal <span data-i18n="1">$ 40.80</span></p>
+                            <p class="price" data-i18n="1">$ 1'799</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="modal__right tabContainer">
+                    <div class="wrap">
+                        <span class="price" data-i18n="1">$ 1'799</span>
+                        <p class="modal__title2" data-i18n="1">Total</p>
+                        <p class="modal__p2" data-i18n="1">Select your plan and see your savings.</p>
+                        <div class="clean__tab btnGroup">
+                            <div class="box">
+                                <button class="btn tabBtn active" data-target="tab1" data-i18n="1">Individual Plans</button>
+                                <button class="btn tabBtn" data-target="tab2" data-i18n="1">Business Plans <span data-i18n="1">Get - 20% Off</span></button>
+                            </div>
+                        </div>
+                        <div class="form__checkbox">
+                            <div class="form__check">
+                                <input type="radio" name="255" id="55">
+                                <label for="55" data-i18n="1">
+                                    <div class="icon">
+                                        <img src="img/check.svg" alt="">
+                                    </div>
+                                    Today
+                                    <div class="img">
+                                        <img src="img/today.svg" alt="">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form__check">
+                                <input type="radio" name="255" id="65">
+                                <label for="65" data-i18n="1">
+                                    <div class="icon">
+                                        <img src="img/check.svg" alt="">
+                                    </div>
+                                    Every week
+                                </label>
+                            </div>
+                            <div class="form__check">
+                                <input type="radio" name="255" id="655">
+                                <label for="655" data-i18n="1">
+                                    <div class="icon">
+                                        <img src="img/check.svg" alt="">
+                                    </div>
+                                    Every two week
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabBlock active" id="tab1">
+                        <div class="wrap">
+                            <p class="modal__title2" data-i18n="1">Tell Us About You</p>
+                            <p class="modal__p2" data-i18n="1">Just a few details before we confirm.</p>
+                            <div class="form__checkbox">
+                                <div class="form__check">
+                                    <input type="radio" name="2655" id="6655">
+                                    <label for="6655" data-i18n="1">
+                                        <div class="icon">
+                                            <img src="img/check.svg" alt="">
+                                        </div>
+                                        I work in the military or public sector
+                                        <span class="green" data-i18n="1">Get - 20% Off</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="modal__inputs">
+                                <div class="form__input">
+                                    <input type="text" placeholder="Your name">
+                                    <span data-i18n="1">Just so we know who to say hi to</span>
+                                </div>
+                                <div class="form__input">
+                                    <div class="num" data-i18n="1">+1</div>
+                                    <input type="text" placeholder="phone number">
+                                    <span data-i18n="1">We’ll use this to contact you. Don’t forget your country code!</span>
+                                </div>
+                                <div class="form__input">
+                                    <input type="text" placeholder="Your email">
+                                    <span data-i18n="1">We’ll use this to contact you. Don’t forget your country code!</span>
+                                </div>
+                                <div class="form__input">
+                                    <input type="text" placeholder="ZIP code">
+                                    <span data-i18n="1">We’ll use this to contact you. Don’t forget your country code!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap">
+                            <p class="modal__title2" data-i18n="1">How Would You Like to Pay?</p>
+                            <p class="modal__p2" data-i18n="1">Choose your preferred payment option for your cleaning service.</p>
+                            <div class="form__checkbox">
+                                <div class="form__check">
+                                    <input type="radio" name="26255" id="66255">
+                                    <label for="66255" data-i18n="1">
+                                        <div class="icon">
+                                            <img src="img/check.svg" alt="">
+                                        </div>
+                                        Pay 30% Now
+                                        <span class="green" data-i18n="1">Get 5% Off</span>
+                                    </label>
+                                </div>
+                                <div class="form__check">
+                                    <input type="radio" name="26255" id="662551">
+                                    <label for="662551" data-i18n="1">
+                                        <div class="icon">
+                                            <img src="img/check.svg" alt="">
+                                        </div>
+                                        Pay in Full After Cleaning
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabBlock" id="tab2">
+                        <div class="wrap">
+                            <p class="modal__title2" data-i18n="1">Tell Us About You</p>
+                            <p class="modal__p2" data-i18n="1">Just a few details before we confirm.</p>
+                            <div class="form__checkbox">
+                                <div class="form__check">
+                                    <input type="radio" name="2655" id="6655_tab2"> <!-- Changed ID to avoid duplicate -->
+                                    <label for="6655_tab2" data-i18n="1"> <!-- Changed for attribute -->
+                                        <div class="icon">
+                                            <img src="img/check.svg" alt="">
+                                        </div>
+                                        I work in the military or public sector
+                                        <span class="green" data-i18n="1">Get - 20% Off</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="modal__inputs">
+                                <div class="form__input">
+                                    <input type="text" placeholder="Your name">
+                                    <span data-i18n="1">Just so we know who to say hi to</span>
+                                </div>
+                                <div class="form__input">
+                                    <div class="num" data-i18n="1">+1</div>
+                                    <input type="text" placeholder="phone number">
+                                    <span data-i18n="1">We’ll use this to contact you. Don’t forget your country code!</span>
+                                </div>
+                                <div class="form__input">
+                                    <input type="text" placeholder="Your email">
+                                    <span data-i18n="1">We’ll use this to contact you. Don’t forget your country code!</span>
+                                </div>
+                                <div class="form__input">
+                                    <input type="text" placeholder="ZIP code">
+                                    <span data-i18n="1">We’ll use this to contact you. Don’t forget your country code!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap">
+                            <p class="modal__title2" data-i18n="1">How Would You Like to Pay?</p>
+                            <p class="modal__p2" data-i18n="1">Choose your preferred payment option for your cleaning service.</p>
+                            <div class="form__checkbox">
+                                <div class="form__check">
+                                    <input type="radio" name="26255_tab2" id="66255_tab2"> <!-- Changed name and ID -->
+                                    <label for="66255_tab2" data-i18n="1"> <!-- Changed for attribute -->
+                                        <div class="icon">
+                                            <img src="img/check.svg" alt="">
+                                        </div>
+                                        Pay 30% Now
+                                        <span class="green" data-i18n="1">Get 5% Off</span>
+                                    </label>
+                                </div>
+                                <div class="form__check">
+                                    <input type="radio" name="26255_tab2" id="662551_tab2"> <!-- Changed name and ID -->
+                                    <label for="662551_tab2" data-i18n="1"> <!-- Changed for attribute -->
+                                        <div class="icon">
+                                            <img src="img/check.svg" alt="">
+                                        </div>
+                                        Pay in Full After Cleaning
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <button class="form__btn" data-i18n="1">Book Now
+                        <span data-i18n="1">$ 1'’799</span>
+                        <div class="icon">
+                            <img src="img/banner-btn.svg" alt="">
+                        </div>
+                    </button>
+                    <p class="modal__text" data-i18n="1">By continuing, you agree to our Terms of Service and Privacy Policy. You will be redirected to Stripe to complete your payment securely.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- MENU BAR -->
+    <header class="header">
+        <div class="container">
+            <div class="header__box">
+                <a href="#body" class="header__logo"></a>
+                <ul class="header__navbar">
+                    <li><a href="#Services" data-i18n="1">Services</a></li>
+                    <li><a href="#Prices" data-i18n="1">Prices</a></li>
+                    <li><a href="#Extra" data-i18n="1">Extra</a></li>
+                </ul>
+                <button class="header__lang" data-i18n="1">
+                    Español
+                    <img src="img/header-lang.svg" alt="">
+                </button>
+                <a href="tel:+737100 1010" class="header__phone" data-i18n="1">
+                    <img src="img/header-phone.svg" alt="">
+                    <span>737 •</span>
+                    100 1010
+                </a>
+                <button class="header__burgir">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- BANNER -->
+    <main class="main">
+        <section class="banner">
+            <div class="container">
+                <img src="img/banner.png" alt="" class="banner__img">
+                <div class="banner__wrap animate-on-scroll">
+                    <h1 data-i18n="1">Clean Looks Good on You</h1>
+                    <p data-i18n="1">The proof is in every room.</p>
+                    <a href="#" class="banner__link" data-i18n="1">Book Now
+                        <img src="img/banner-btn.svg" alt="">
+                    </a>
+                    <div class="banner__box">
+                        <div class="banner__rating">
+                            <span data-i18n="1">4.8</span>
+                            <img src="img/banner-icon1.svg" alt="">
+                        </div>
+                        <div class="banner__rating">
+                            <span data-i18n="1">4.6</span>
+                            <img src="img/banner-icon2.svg" alt="">
+                        </div>
+                        <div class="banner__rating">
+                            <span data-i18n="1">5.0</span>
+                            <img src="img/banner-icon3.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        
+
+
+
+        <!-- SERVICES -->
+        <section class="services" id="Services">
+            <div class="container">
+                <div class="services__box">
+                    {% for service in services %}
+                    <div class="services__block animate-on-scroll {% cycle '' 'transition-delay2' %}">
+                        <input type="checkbox" class="service-check" data-name="{{ service.name }}" data-price="{{ service.individual_price }}">
+                        <div class="services__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13" fill="none">
+                                <path d="M7.00023 10.17L16.1922 0.979004L17.6062 2.393L7.00023 12.999L0.63623 6.635L2.05023 5.221L7.00023 10.17Z" fill="black" fill-opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <div class="services__content">
+                            <h5>{{ service.name }}</h5>
+                            <p>{{ service.description }}</p>
+                            <span class="services__price">${{ service.individual_price }}</span>
+                            <div class="services__check">
+                                {% for tag in service.room_tags.all %}
+                                <span><img src="{% static 'img/service-check.svg' %}" alt="">{{ tag.name }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="services__img">
+                            <img src="{{ service.image.url }}" alt="">
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+
+        
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Before and After: Real Cleaning Results -->
+        <section class="befaft">
+            <div class="container">
+                <div class="title">
+                    <h2 class="animate-on-scroll" data-i18n="1">Before and After: Real Cleaning Results</h2>
+                    <p class="animate-on-scroll transition-delay2" data-i18n="1">The proof is in every room.</p>
+                </div>
+                <div class="befaft__slider animate-on-scroll">
+                    <div class="befaft__wrap">
+                        <div class="befaft__block">
+                            <div class="beforeafter" style="width: 100%; height: 100%;">
+                                <img src="img/room_packshot2-Camera 2.png" />
+                                <img src="img/room_packshot-Camera 2.png" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="befaft__wrap">
+                        <div class="befaft__block">
+                            <div class="beforeafter" style="width: 100%; height: 100%;">
+                                <img src="img/room_packshot2-Camera 2.png" />
+                                <img src="img/room_packshot-Camera 2.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- PRICES -->
+        <section class="clean" id="Prices">
+            <div class="container">
+                <div class="title">
+                    <h2 class="animate-on-scroll" data-i18n="1">The Right Clean, Right When You Need It</h2>
+                    <p class="animate-on-scroll transition-delay2" data-i18n="1">Flexible options for every lifestyle.</p>
+                </div>
+                <div class="tabContainer">
+                    <!-- Tabs can be enabled later if needed -->
+                    <!--
+                    <div class="clean__tab btnGroup animate-on-scroll">
+                        <div class="box">
+                            <button class="btn tabBtn active" data-target="tab1" data-i18n="1">Individual Plans</button>
+                            <button class="btn tabBtn" data-target="tab2" data-i18n="1">Business Plans</button>
+                        </div>
+                    </div>
+                    -->
+                    <div class="tabBlock active" id="tab1">
+                        <div class="clean__slider">
+                            <div class="clean__wrap">
+                                {% for service in services %}
+                                <div class="clean__block">
+                                    <div class="clean__top">
+                                        <div class="wrap">
+                                            <h6>{{ service.name }}</h6>
+                                            <p>{{ service.description }}</p>
+                                            <div class="services__check">
+                                                {% for tag in service.room_tags.all %}
+                                                <span>
+                                                    <img src="{% static 'img/service-check.svg' %}" alt="check">
+                                                    {{ tag.name }}
+                                                </span>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clean__bottom">
+                                        <ul>
+                                            {% for tag in service.feature_tags.all %}
+                                            <li>
+                                                <img src="{% static 'img/service-check.svg' %}" alt="check">
+                                                {{ tag.name }}
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                        <div class="clean__price">
+                                            <span data-i18n="1">From</span>
+                                            <p>$ {{ service.individual_price }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
+
+
+        <!-- EXTRA SERVICES -->
+        <section class="addmore" id="Extra">
+            <div class="container">
+                <div class="title">
+                    <h2 class="animate-on-scroll" data-i18n="1">Add More. Clean Better.</h2>
+                    <p class="animate-on-scroll transition-delay2" data-i18n="1">
+                        Choose from a range of add-ons for a deeper, more personalized clean.
+                    </p>
+                </div>
+                <div class="addmore__slider animate-on-scroll">
+                    {% for extra in extra_services %}
+                    <div class="addmore__wrap">
+                        <label>
+                            <input type="checkbox" class="extra-check" data-name="{{ extra.name }}" data-price="{{ extra.price }}">
+                            <div class="addmore__block">
+                                <div class="services__link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13" fill="none">
+                                        <path d="M7.00023 10.17L16.1922 0.979004L17.6062 2.393L7.00023 12.999L0.63623 6.635L2.05023 5.221L7.00023 10.17Z" fill="black" fill-opacity="0.5"/>
+                                    </svg>
+                                </div>
+                                <div class="addmore__content">
+                                    <h5 data-i18n="1">{{ extra.name }}</h5>
+                                    <p data-i18n="1">{{ extra.description }}</p>
+                                    <span class="addmore__price" data-i18n="1">$ {{ extra.price }}</span>
+                                </div>
+                                <div class="addmore__img">
+                                    <img src="{{ extra.image.url }}" alt="{{ extra.name }}">
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="form">
+            <div class="container">
+                <div class="form__box">
+                    <div class="form__block tabContainer animate-on-scroll">
+
+                         <!-- Total -->
+                         <div class="form__wrap animate-on-scroll">
+                            <div class="wrap">
+                                <span class="form__price" data-i18n="1">$ 0.00</span>
+                                <p class="form__title" data-i18n="1">Total</p>
+                                <p class="form__p" data-i18n="1">Total</p>
+                            </div>
+                        </div>
+
+                       <!-- Proceed Button -->
+                        <div class="animate-on-scroll">
+                            <button class="form__btn open-modal" data-i18n="1" onclick="submitTotal()">
+                                Proceed to Checkout
+                                <span data-i18n="1">$ 0.00</span>
+                                <div class="icon"><img src="{% static 'img/banner-btn.svg' %}" alt=""></div>
+                            </button>
+                        </div>
+
+                        
+                    <!-- End Tab 1 -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+        <section class="asked">
+            <div class="container">
+                <div class="asked__wrap">
+                    <div class="asked__title">
+                        <h4 class="animate-on-scroll" data-i18n="1">Got Questions? We’ve Got Answers</h4>
+                        <p class="animate-on-scroll transition-delay2" data-i18n="1">Find quick answers to the most common cleaning service questions.</p>
+                    </div>
+                    <div class="asked__right animate-on-scroll transition-delay6">
+                        <div class="wrap">
+                            <div class="asked__btn" data-i18n="1">
+                                What areas do you serve?
+                                <div class="icon"></div>
+                            </div>
+                            <div class="asked__block">
+                                <p data-i18n="1">We currently serve all neighborhoods in Austin, TX and nearby suburbs. Just enter your ZIP code during booking to check availability.</p>
+                            </div>
+                        </div>
+                        <div class="wrap">
+                            <div class="asked__btn" data-i18n="1">
+                                How long does a typical cleaning take?
+                                <div class="icon"></div>
+                            </div>
+                            <div class="asked__block">
+                                <p data-i18n="1">We currently serve all neighborhoods in Austin, TX and nearby suburbs. Just enter your ZIP code during booking to check availability.</p>
+                            </div>
+                        </div>
+                        <div class="wrap">
+                            <div class="asked__btn" data-i18n="1">
+                                Do I need to provide cleaning supplies?
+                                <div class="icon"></div>
+                            </div>
+                            <div class="asked__block">
+                                <p data-i18n="1">We currently serve all neighborhoods in Austin, TX and nearby suburbs. Just enter your ZIP code during booking to check availability.</p>
+                            </div>
+                        </div>
+                        <div class="wrap">
+                            <div class="asked__btn" data-i18n="1">
+                                Can I book a same-day cleaning?
+                                <div class="icon"></div>
+                            </div>
+                            <div class="asked__block">
+                                <p data-i18n="1">We currently serve all neighborhoods in Austin, TX and nearby suburbs. Just enter your ZIP code during booking to check availability.</p>
+                            </div>
+                        </div>
+                        <div class="wrap">
+                            <div class="asked__btn" data-i18n="1">
+                                What if I’m not home during the cleaning?
+                                <div class="icon"></div>
+                            </div>
+                            <div class="asked__block">
+                                <p data-i18n="1">We currently serve all neighborhoods in Austin, TX and nearby suburbs. Just enter your ZIP code during booking to check availability.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrap animate-on-scroll transition-delay2">
+                    <div class="footer__box">
+                        <div class="footer__left">
+                            <a href="#" class="footer__logo">
+                                <img src="img/logo-footer.svg" alt="">
+                            </a>
+                            <div class="footer__soc">
+                                <a href="#">
+                                    <img src="img/soc1.svg" alt="">
+                                    <img src="img/soc1-white.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="img/soc2.svg" alt="">
+                                    <img src="img/soc2-white.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="img/soc3.svg" alt="">
+                                    <img src="img/soc3-white.svg" alt="">
+                                </a>
+                            </div>
+                            <p class="footer__copy" data-i18n="1">©2025 Hill Country Cleaners Texas</p>
+                        </div>
+                        <div class="footer__center">
+                            <div class="footer__block">
+                                <h6 data-i18n="1">Services</h6>
+                                <ul class="footer__navbar">
+                                    <li><a href="#" data-i18n="1">Regular Cleaning</a></li>
+                                    <li><a href="#" data-i18n="1">Deep Cleaning</a></li>
+                                    <li><a href="#" data-i18n="1">Moving Cleaning</a></li>
+                                    <li><a href="#" data-i18n="1">Airbnb Turnover</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer__block">
+                                <h6 data-i18n="1">Extra Services</h6>
+                                <ul class="footer__navbar">
+                                    <li><a href="#" data-i18n="1">Wall Cleaning</a></li>
+                                    <li><a href="#" data-i18n="1">Pet Hair Removal</a></li>
+                                    <li><a href="#" data-i18n="1">Behind Fridge/Oven Cleaning</a></li>
+                                    <li><a href="#" data-i18n="1">Laundry and Folding</a></li>
+                                    <li><a href="#" data-i18n="1">Bedding Change</a></li>
+                                    <li><a href="#" data-i18n="1">Inside Cabinets</a></li>
+                                    <li><a href="#" data-i18n="1">Interior Window Cleaning</a></li>
+                                    <li><a href="#" data-i18n="1">Exterior Window Cleaning</a></li>
+                                    <li><a href="#" data-i18n="1">Patio Windows and Doors</a></li>
+                                    <li><a href="#" data-i18n="1">Wet Wipe Window Blinds</a></li>
+                                    <li><a href="#" data-i18n="1">Inside Fridge Cleaning</a></li>
+                                    <li><a href="#" data-i18n="1">Inside Oven Cleaning</a></li>
+                                    <li><a href="#" data-i18n="1">Organization</a></li>
+                                    <li><a href="#" data-i18n="1">Dishwashing</a></li>
+                                    <li><a href="#" data-i18n="1">Garage Cleaning</a></li>
+                                    <li><a href="#" data-i18n="1">Wet Wipe Baseboards Cleaning</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer__right">
+                            <div class="footer__block">
+                                <h6 data-i18n="1">Docs</h6>
+                                <ul class="footer__navbar">
+                                    <li><a href="#" data-i18n="1">Privacy Policy</a></li>
+                                    <li><a href="#" data-i18n="1">Terms of Use</a></li>
+                                    <li><a href="#" data-i18n="1">Pricing</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/SmoothScroll.js' %}"></script>
+    <script src="{% static 'js/jquery.event.move.js' %}"></script>
+    <script src="{% static 'js/jquery.twentytwenty.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'slick-1.8.1/slick/slick.min.js' %}"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const serviceChecks = document.querySelectorAll('.service-check');
+            const extraChecks = document.querySelectorAll('.extra-check');
+            const totalEls = document.querySelectorAll('.form__price, .form__btn span');
+            const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+        
+            // Function to collect selected regular services
+            function getSelectedServices() {
+                const selected = [];
+                serviceChecks.forEach(chk => {
+                    if (chk.checked) {
+                        selected.push({
+                            serviceName: chk.dataset.name,
+                            price: chk.dataset.price
+                        });
+                    }
+                });
+                return selected;
+            }
+        
+            // Function to collect selected extra services
+            function getSelectedExtraServices() {
+                const selected = [];
+                extraChecks.forEach(chk => {
+                    if (chk.checked) {
+                        selected.push({
+                            name: chk.dataset.name,
+                            price: chk.dataset.price
+                        });
+                    }
+                });
+                return selected;
+            }
+        
+            // Function to calculate the total price
+            function calculateTotal() {
+                let total = 0;
+        
+                serviceChecks.forEach(chk => {
+                    if (chk.checked) total += parseFloat(chk.dataset.price);
+                });
+        
+                extraChecks.forEach(chk => {
+                    if (chk.checked) total += parseFloat(chk.dataset.price);
+                });
+        
+                totalEls.forEach(el => {
+                    el.textContent = `$ ${total.toFixed(2)}`;
+                });
+        
+                return total;
+            }
+        
+            // Submit total and services to the backend
+            window.submitTotal = function () {
+                const total = calculateTotal();
+                const selectedServices = getSelectedServices();
+                const selectedExtraServices = getSelectedExtraServices();
+        
+                console.log('Sending data:', {
+                    total,
+                    services: selectedServices,
+                    extra_services: selectedExtraServices
+                });
+        
+                fetch('/submit-total/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': csrfToken
+                    },
+                    body: JSON.stringify({
+                        total: total,
+                        services: selectedServices,
+                        extra_services: selectedExtraServices
+                    })
+                })
+                .then(res => res.json())
+                .then(data => {
+                    console.log('Response from server:', data);
+                })
+                .catch(err => {
+                    console.error('Error submitting order:', err);
+                });
+            };
+        
+            // Recalculate total when checkboxes change
+            [...serviceChecks, ...extraChecks].forEach(chk => {
+                chk.addEventListener('change', calculateTotal);
+            });
+        });
+        </script>
+        
+    
+    <!-- TOTAL AND BUTTON  FINISH-->
+
+    <!-- Lenis -->
+    <script>
+        // --- Инициализация Lenis (ОСТАВЛЯЕМ ТОЛЬКО ОДНУ!) ---
+        // const lenis = new Lenis({
+        //     // Важно: Убедитесь, что элемент '.scroll-container' существует в вашем HTML,
+        //     // иначе querySelector вернет null и Lenis может работать некорректно.
+        //     // Если скролл должен быть на всей странице (window/body), УДАЛИТЕ или закомментируйте строку 'wrapper'.
+        //     wrapper: document.querySelector('.scroll-container'),
+        //     lerp: 0.1,      // Коэффициент плавности (меньше = плавнее)
+        //     duration: 1.2,  // Длительность анимации (альтернатива lerp)
+        //     smoothTouch: true // Плавный скролл на тач-устройствах
+        // });
+
+        // Опционально: если хотите что-то делать при скролле
+        // lenis.on('scroll', (e) => {
+        //   console.log(e) // Вывод информации о скролле в консоль
+        // })
+
+        // Функция, которая будет вызываться на каждом кадре анимации
+        function raf(time) {
+            lenis.raf(time); // Обновляем состояние Lenis
+            requestAnimationFrame(raf); // Запрашиваем следующий кадр
+        }
+
+        // Запускаем цикл анимации (ТОЛЬКО ОДИН РАЗ!)
+        requestAnimationFrame(raf);
+
+
+        // --- Настройка Intersection Observer для анимации (Этот блок остается без изменений) ---
+
+        // 1. Найти все элементы, которые нужно анимировать
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+        // 2. Настроить Observer
+        const observerOptions = {
+            // Если вы используете `wrapper` в Lenis, и этот контейнер имеет свой скроллбар,
+            // возможно, вам нужно указать его и здесь в `root`:
+            // root: document.querySelector('.scroll-container'),
+            // Если скролл на всей странице, оставляем `root: null`
+            root: null,
+            rootMargin: '0px', // Отступы вокруг viewport (или root)
+            threshold: 0.1     // % видимости элемента для срабатывания
+        };
+
+        // 3. Создать Callback-функцию (что делать при пересечении)
+        const observerCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Отписываемся, чтобы анимация сработала один раз
+                    observer.unobserve(entry.target);
+                }
+                // Для анимации при уходе из видимости:
+                else {
+                  entry.target.classList.remove('is-visible');
+                }
+            });
+        };
+
+        // 4. Создать сам Observer
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        // 5. Начать наблюдение за каждым элементом
+        animatedElements.forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+    <!-- Slick Slider -->
+    <script>
+        $('.befaft__slider').slick({
+            infinite: false,
+            slidesToShow: 1,
+            speed: 800,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: true,
+            draggable: false,
+            swipe: false
+        });
+        $('.clean__slider').slick({
+            infinite: false,
+            speed: 600,
+            slidesToShow: 3,
+            slidesToShow: 3,
+            dots: false,
+            arrows: false,
+            responsive: [
+                {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 2,
+                },
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1,
+                },
+                }
+            ]
+        });
+        $('.addmore__slider').slick({
+            infinite: false,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            responsive: [
+                {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 3,
+                },
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 1,
+                },
+                }
+            ]
+        });
+    </script>
+    <!-- Tab -->
+    <script>
+        function initTabs(containerSelector) {
+            $(containerSelector).each(function () {
+                const $container = $(this);
+        
+                $container.find('.tabBtn').on("click", function () {
+                    const target = $(this).data("target");
+        
+                    $container.find('.tabBtn').removeClass("active");
+                    $container.find('.tabBlock').removeClass("active");
+        
+                    $(this).addClass("active");
+                    $container.find("#" + target).addClass("active");
+                });
+            });
+        }
+        initTabs('.tabContainer');
+    </script>
+    <!-- After Before -->
+    <script>
+        $(document).ready(function() {
+            $(".beforeafter").twentytwenty({
+                default_offset_pct: 0.5, // сколько показывать 'изображение до' в процентах (максимально 1) сразу после загрузки страницы
+                orientation: 'horizontal', // ориентация слайдера ('horizontal' или 'vertical')
+                before_label: 'before', // подпись 'до'
+                after_label: 'after', // подпись 'после'
+                no_overlay: false, // не показывать затемнение с надписями 'до' и 'после'
+                move_slider_on_hover: false, // двигать "бегунок" слайдера вместе с курсором мыши
+                move_with_handle_only: true, // двигать слайдер только за его "бегунок"
+                click_to_move: false // разрешить перемещение "бегунка" слайдера по клику на изображении
+            });
+        });
+    </script>
+</body>
+</html>
